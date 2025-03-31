@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@heroui/react";
 import { useState } from "react";
 // import emailjs from "emailjs-com";
 
@@ -85,7 +85,7 @@ export const Contact = (props: any) => {
 						variant={success ? "solid" : "bordered"}
 						radius="sm"
 						color={success ? "success" : "default"}
-						onClick={() => setSuccess(!success)}
+						onPress={() => setSuccess(!success)}
 					>
 						Send
 					</Button>

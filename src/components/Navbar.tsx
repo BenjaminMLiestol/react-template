@@ -1,5 +1,5 @@
 import { DarkModeIcon, LightModeIcon } from "@/assets/icons";
-import { Navbar, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Switch } from "@nextui-org/react";
+import { Navbar, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Switch } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 import { useTheme } from "next-themes";
 import { useState } from "react";
@@ -7,7 +7,7 @@ import { useState } from "react";
 export const NavbarComponent = () => {
 	const mode = localStorage.getItem("theme");
 	const [isExpanded, setExpanded] = useState(false);
-	const [isDarkMode, setDarkMode] = useState(mode === "dark" ? true : false);
+	const [isDarkMode, setDarkMode] = useState(mode === "dark");
 	const { setTheme } = useTheme();
 
 	const updateMode = (isSelected: boolean) => {

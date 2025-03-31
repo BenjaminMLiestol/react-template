@@ -11,7 +11,7 @@ import {
 	Divider,
 	Input,
 	Textarea,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 
 export const ErrorComponent = () => {

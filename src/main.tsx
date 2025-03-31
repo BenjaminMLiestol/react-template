@@ -1,4 +1,4 @@
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
@@ -28,7 +28,7 @@ declare module "@tanstack/react-router" {
 }
 
 const mode = localStorage.getItem("theme") || "dark";
-localStorage.setItem('theme', mode);
+localStorage.setItem("theme", mode);
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
@@ -40,7 +40,7 @@ declare module "@tanstack/react-router" {
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
-		<NextUIProvider>
+		<HeroUIProvider>
 			<NextThemesProvider attribute="class" defaultTheme={mode}>
 				<main className="text-foreground bg-background flex flex-col">
 					<QueryClientProvider client={queryClient}>
@@ -49,6 +49,6 @@ createRoot(document.getElementById("root")!).render(
 					</QueryClientProvider>
 				</main>
 			</NextThemesProvider>
-		</NextUIProvider>
+		</HeroUIProvider>
 	</StrictMode>,
 );
